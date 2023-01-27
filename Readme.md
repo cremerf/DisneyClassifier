@@ -1,37 +1,39 @@
-# Disney - MELI API Project
+# Disney - MELI Classifier Project
 
-Este proyecto, desarrollado por **Intellignos | Havas**, extrae de forma diaria, desde la API de Mercado Libre, las keywords relativas a las tendencias de cada día, desagregadas por categorías y sub-categorías.
+This Project make daily downloads of data (keywords) of every endpoint from MercadoLibreAPI (https://developers.mercadolibre.com.ar/), then, proceprocess data (data cleaning & data wrangling), make some validations and classifies with Regex each keyword regarding brands, characters, saga, movies and franchise from The Walt Disney Company Universe. 
+
+Finally, each classified keyword stores in a dataframe. 
 
 ## Requirements
 
-Instalar los módulos necesarios que se encuentran dentro del archivo requirements.txt
-Dentro de la carpeta del proyecto, correr el comando:
+
+Install requirements with the following command
 
 ```bash
  pip install -r /requirements.txt
 ```
 
-## Arquitectura del proyecto
-### Módulos y Carpetas:
+## Root folder
+### Modules & folders:
 
-#### Carpetas de datos:
+#### Data Folder:
 ```python
 Proyecto
-|_ Trends_Cat # Contiene las carpetas donde se almacenan los archivos diarios generados por cada script.
-|  |_ bajada_datos_diaria # Contiene los archivos generados cada día por el script bajada_datos.py
-|  |_ clasificacion_diaria # Contiene los archivos generados cada día por el script clasificacion.py
-|  |_ procesamiento_diaria # Contiene los archivos generados cada día por el script procesamiento.py
-|  |_ sustantivos_diaria # Contiene los archivos generados cada día por el script sustantivos.py
+|_ Trends_Cat # Folder where daily files generated from each script stores.
+|  |_ bajada_datos_diaria # Stores generated daily files from bajada_datos.py
+|  |_ clasificacion_diaria # Stores generated daily files from clasificacion.py.
+|  |_ procesamiento_diaria # Stores generated daily files from procesamiento.py
+|  |_ sustantivos_diaria # Stores generated daily files from sustantivos.py.
 |  |
-|  |_ df_cat_subcat.xlsx  # Contiene una tabla con todas las categorías y subcategorías y sus códigos.
-|  |_ df_final_subcategorias.xlsx  # Contiene una tabla con todas las extracciones diarias de keywords realizada por Globant. (Utilizar para desagregar las keywords día por día)
+|  |_ df_cat_subcat.xlsx  # Stores df with every category, subcategory and codes from API
+|  |_ df_final_subcategorias.xlsx  # Stores df with downloaded keywords
 |
-|_ datos # Contiene los archivos de Personajes y Marcas sobre los cuales evaluar las coincidencias.
+|_ datos # Stores data from TWDC (Brands & Characters)
    |_ Personajes.xlsx
    |_ marcas_final.xlsx
 ```
 
-#### Módulos
+#### Modules
 ```python
 |_ packages # Contiene módulos desarrollados con clases (POO) utilizados como herramientas a lo largo del código, del mismo modo que un módulo para almacenar los directorios en un único lugar.
 |  |_ tools.py # Contiene la Clase Tool que posee métodos de clasificación y preprocesamiento para ser invocados dentro del script necesario y evitar repetir código.
@@ -51,6 +53,5 @@ Proyecto
 
 
 
-## Developed by
-**Intellignos | Havas**\
-Website: (https://intellignos.com/es/)
+## Authors
+**Federico Cremer | Andres De Innocentiis**\
