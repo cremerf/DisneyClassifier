@@ -53,5 +53,5 @@ Proyecto
 
 
 
-## Authors
-**Federico Cremer | Andres De Innocentiis**\
+## Author
+**Federico Cremer**\
