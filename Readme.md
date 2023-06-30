@@ -1,6 +1,6 @@
 # Disney - MELI Classifier Project
 
-This Project makes daily downloads of data (keywords) of every endpoint from MercadoLibreAPI (https://developers.mercadolibre.com.ar/), then, proceprocess data (data cleaning & data wrangling), make some validations and classifies with Regex module each keyword regarding brands, characters, saga, movies and franchise from The Walt Disney Company Universe. 
+This Project daily downloads data (keywords) of every endpoint from MercadoLibreAPI (https://developers.mercadolibre.com.ar/), then, proceprocess data (data cleaning & data wrangling), make some validations and classifies with Regex module each keyword regarding brands, characters, saga, movies and franchise from The Walt Disney Company Universe. 
 
 Finally, each classified keyword stores in a dataframe. 
 
